@@ -1,0 +1,370 @@
+*{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+        font-family: 'Rum Raisin', sans-serif;
+        outline: none;
+        transition: 0.5s;
+        scroll-behavior: smooth;
+        letter-spacing: 1px;
+      }
+      body{
+        background: radial-gradient(ellipse at center, #4d5f7b, #3F02DC);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+      }
+      .mainarea{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 30px;
+      }
+      .mainarea h1{
+        font-size: 2em;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+        color: rgb(131, 130, 130);
+        text-shadow: 0px 1.2px rgb(5, 5, 5);
+        font-weight: 900;
+        background-color: white;
+        border-radius: 32px 32px 60px 60px;
+        overflow: hidden;
+        box-shadow: 10px 10px 20px rgb(18, 0, 121);
+      }
+      .mainarea h1 img{
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+      }
+      .mainarea .loginarea{
+        max-width: 800px;
+        min-width: none;
+      }
+      .mainarea .loginarea .signin{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .mainarea .loginarea .signin label,.messagingarea label{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 5px;
+        margin-top: 25px;
+        position: relative;
+        cursor: pointer;
+        width: 330px;
+        overflow: hidden;
+      }
+      .messagingarea{
+        position: relative; 
+        height:80vh;
+        width: 600px;
+      }
+      .messagingarea label{
+        margin-top: 0;
+      }
+      .messagingarea .typingarea{
+        position: absolute;
+        display: grid;
+        grid-template-columns: auto 40px 60px;
+        background-color: white;
+        padding: 5px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .messagingarea .typingarea button{
+        background-color: rgb(177, 177, 177);
+        border: none;
+      }
+      .messagingarea .typingarea button:nth-last-child(1){
+        padding: 8px;
+        color: white;
+        font-weight: 900;
+        border-radius: 0 6px 6px 0;
+      }
+      .messagingarea .typingarea button:nth-last-child(2){
+        margin: 0 5px;
+      }
+      .messagingarea .typingarea #mess{
+        padding-left: 5px;
+        border-radius: 6px 0 0 6px;
+        border: 1.5px solid black;
+      }
+      .messagingarea .messages{
+        height: 80%;
+        width: 100%;
+        margin-top: 10px;
+        overflow:auto;
+      }
+      .messagingarea label{
+        width: 100%;
+      }
+      .messagingarea .messages::-webkit-scrollbar{
+        display: none;
+      }
+      .messagingarea .messages .messslide{
+        position: absolute;
+        right: 15px;
+        bottom: 60px;
+        padding: 3px;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        user-select: none;
+        opacity: 0.8;
+        transform: rotate(90deg);
+        font-size: 25px;
+        transition: none;
+      }
+      .messagingarea .messages .messslide a{
+        text-decoration: none;
+      }
+      .mainarea .loginarea .signin label input,.messagingarea label input{
+        border: none;
+        background-color: transparent;
+        transform: translate(0,100%);
+        color: rgb(0, 56, 121);
+        border-bottom: 2px solid rgb(212, 212, 212);
+        font-size: 1em;
+        outline: none;
+      }
+      .mainarea .loginarea .signin label .bord,.messagingarea label .bord{
+        border-bottom: 2px solid rgb(0, 0, 158);
+        transform: translate(-100%,0);
+        transition: 0.5s;
+      }
+      .mainarea .loginarea .signin label .words,.messagingarea label .words{
+        transition: 0.5s;
+        opacity: 1;
+        transform: translate(0,-2px);
+        color: white;
+      }
+      .mainarea .loginarea .signin label input:focus+.words+.bord,.mainarea .loginarea .signin label input:valid+.words+.bord,.messagingarea label input:focus+.words+.bord,.messagingarea label input:valid+.words+.bord{
+        transform: translate(0,0);
+      }
+      .mainarea .loginarea .signin label input:focus+.words,.mainarea .loginarea .signin label input:valid+.words,.messagingarea label input:focus+.words,.messagingarea label input:valid+.words{
+        transform: translate(0,-100%);
+        opacity: 0.5;
+      }
+      .mainarea .loginarea .signin button{
+        margin: 30px 0;
+        padding: 5px 20px;
+        border: none;
+        color: rgb(16, 16, 122);
+        background-color: rgb(100, 100, 255);
+        border-radius: 32px 32px 60px 60px;
+        cursor: pointer;
+      }
+      .mainarea .loginarea .signin button:active{
+        background-color: rgba(100, 100, 255, 0.555);
+      }
+      .mainarea .loginarea .signin p{
+        text-align: left;
+        margin: 20px 0;
+        font-size: 15px;
+        color: rgb(0, 0, 90);
+      }
+      .mainarea .loginarea .signin h3 input{
+        padding: 5px 20px;
+        border: none;
+        color: rgb(25, 122, 16);
+        background-color: rgb(40, 224, 49);
+        border-radius: 32px 32px 60px 60px;
+        cursor: pointer;
+      }
+      .mainarea .loginarea .signin h3 input:active{
+        background-color: rgba(40, 224, 49, 0.521);
+      }
+      .login{
+        transform: translate(0,-20%);
+      }
+      .part{
+        margin: 10px 0;
+        background-color: rgb(43, 255, 0);
+        border-radius: 0 20px 20px 0;
+        padding: 10px;
+        color: white;
+        overflow: auto;
+      }
+      .part h6{
+        color: rgb(22, 119, 3);
+      }
+      .part h6:nth-last-child(1){
+        text-align: right;
+      }
+      @media (max-width:720px) {
+        .mainarea{
+          padding: 15px 10px 10px 10px;
+        }
+        .mainarea h1{
+          padding: 9px 15px;
+          font-size: 20px;
+        }
+        .mainarea h1 img{
+          width: 35px;
+          height: 35px;
+        }
+        .mainarea .loginarea .signin label,.messagingarea label{
+          width: auto;
+        }
+        .mainarea .loginarea .signin h3{
+          font-size: 15px;
+        }
+        .mainarea .loginarea .signin p{
+          font-size: 13px;
+        }
+        .messagingarea{
+          width: 100%;
+        }
+      }
+      /*loading area*/
+      .load{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .load .content{
+            position: relative;
+            width:550px;
+            height: 300px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .load .content .line{
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgb(43, 253, 43);
+            transform: scaleX(0);
+            animation: animate 5s infinite cubic-bezier(0.85, 0.02, 0.17, 1.01) 1s;
+        }
+        @keyframes animate{
+            0%{
+                transform: scaleX(0);
+            }
+            20%{
+                transform: scaleX(0);
+            }
+            50%{
+                transform: scaleX(1);
+            }
+            70%{
+                transform: scaleX(1);
+            }
+            100%{
+                transform: scaleX(0);
+            }
+        }
+        .load .content .pen{
+            position: absolute;
+            width: 50%;
+            height: 23px;
+            top: 19px;
+            left: 37%;
+            transform: rotate(120deg);
+            background-image: linear-gradient(to right,transparent 15%,rgb(43, 253, 43) 15%,rgb(43, 253, 43) 85%);
+            border-radius: 5px;
+            animation: anime 5s infinite cubic-bezier(0.85, 0.02, 0.17, 1.01) 1s;
+        }
+        @keyframes anime{
+           0%{
+               top: 19px;
+               left: 37%;
+               transform: rotate(120deg);
+           }
+           10%{
+               top:0px;
+           }
+           20%{
+               left: 37%;
+               transform: rotate(-60deg);
+           }
+           23%{
+               top:19px;
+           }
+           50%{
+               top:19px;
+               left: 87%;
+               transform: rotate(-60deg);
+           }
+           60%{
+               top:35px;
+               left: 95%;
+           }
+           70%{
+               top:20px;
+               left: 87%;
+               transform: rotate(120deg);
+           }
+           100%{
+               left: 37%;
+               transform: rotate(120deg);
+           }
+        }
+        .load .content .pen::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 100%;
+            border-radius: 0 5px 5px 0;
+            background-color: rgb(41, 41, 41);
+            z-index: -1;
+        }
+        .load .content .pen::before{
+            content: "";
+            position: absolute;
+            left:-20px;
+            top: 0;
+            border:solid;
+            border-width: 11.5px 50px 11.5px 11.5px;
+            border-color: transparent rgb(41, 41, 41) transparent transparent;
+            z-index: -1;
+        }
+        .load .content .pen .front{
+            position: absolute;
+            left:-34px;
+            top: 0;
+            border:solid;
+            width: 2px;
+            height: 2px;
+            border-radius: 50px;
+            border-width: 11.5px 50px 11.5px 11.5px;
+            border-color: transparent rgb(43, 253, 43) transparent transparent; 
+            transform: scale(0.3);
+            z-index: 1;
+        } 
+        @media (max-width:550px) {
+            .load .content{
+                width: 50%;
+                height: 25%;
+            }
+            .load .content .pen{
+                background-image: linear-gradient(to right,transparent 40%,rgb(43, 253, 43) 40%,rgb(43, 253, 43) 40%);
+            }
+            .load div:nth-last-child(1){
+                font-size: 15px !important;
+            }
+        }
+        @media (max-width:320px) {
+            .load .content .pen{
+                background-image: linear-gradient(to right,transparent 50%,rgb(43, 253, 43) 50%,rgb(43, 253, 43) 50%);
+            }
+        }
