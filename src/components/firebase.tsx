@@ -8,13 +8,7 @@ import { getAuth, OAuthProvider } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDp8K3w2zAatmcZfp1za0M0fP1-_5mVgIg",
-  authDomain: "transponders-snail.firebaseapp.com",
-  databaseURL: "https://transponders-snail-default-rtdb.firebaseio.com",
-  projectId: "transponders-snail",
-  storageBucket: "transponders-snail.firebasestorage.app",
-  messagingSenderId: "726588618357",
-  appId: "1:726588618357:web:b4d31f5b5bb5b98f7c2a3c"
+  
 };
 
 // Initialize Firebase
