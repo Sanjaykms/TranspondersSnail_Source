@@ -88,8 +88,18 @@ export default function Login(){
                 <span className="bord"></span>
               </label>
               <button type="submit">Sign in</button>
-              <h3><span style={{fontStyle:"italic",color:"red"}}>Don't have an Account :</span>  Get sign in authority at <input type="button" value="Request" onClick={request} /></h3>
-              <p>Note : Above Request option needs Email id. So make sure to enter a valid email in above Email area [ no need for any other details only email ] .</p>
+              {/* <h3><span style={{fontStyle:"italic",color:"red"}}>Don't have an Account :</span>  Get sign in authority at <input type="button" value="Request" onClick={request} /></h3>
+              <p>Note : Above Request option needs Email id. So make sure to enter a valid email in above Email area [ no need for any other details only email ] .</p> */}
+              <h3>
+            <span style={{ fontStyle: "italic", color: "red" }}>
+              New here ? 
+            </span>{" "}
+            <input
+              type="button"
+              value="Signup"
+              onClick={() => navigate("/signup")}
+            />
+          </h3>
             </form>
       </div> 
     </>

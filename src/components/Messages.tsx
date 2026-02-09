@@ -94,6 +94,11 @@ function ChatMessages({ userId, onDelete }: any) {
 
     try {
       await onDelete(id); // firebase remove
+    //    setMessages((prev) =>
+    //   prev.map((msg) =>
+    //     msg.id === id ? { ...msg, isDeleted: true } : msg
+    //   )
+    // );
     } catch (err) {
       // re-enable if failed
       setMessages((prev) =>
